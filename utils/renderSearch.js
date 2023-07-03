@@ -5,7 +5,7 @@ export function renderResult(items) {
   const listElem = document.querySelector(".searchRes");
   listElem.innerHTML = ``;
   if (items) {
-    items.forEach((item, index) => {
+    items.forEach((item) => {
       const listItem = document.createElement("li");
       listItem.classList.add("listItem");
       listItem.innerHTML = `<h4>${item.name}</h4>`;
