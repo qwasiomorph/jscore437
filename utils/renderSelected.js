@@ -4,8 +4,10 @@ export function addRepo(repo) {
   const owner = repo.owner.login;
   const stars = repo.stargazers_count;
   const item = document.createElement("li");
-  item.innerHTML = `<h4>Name: ${name}</h4><div>Owner: ${owner}</div><div>Stars: ${stars}</div>`;
+  item.classList.add("chosenItem");
+  item.innerHTML = `<div class="itemInfo"><h4>Name: ${name}</h4><div>Owner: ${owner}</div><div>Stars: ${stars}</div></div>`;
   const remButton = document.createElement("button");
+  remButton.classList.add("buttonRemove");
   remButton.addEventListener("click", (e) => {
     e.preventDefault();
     listOfSelected.removeChild(item);

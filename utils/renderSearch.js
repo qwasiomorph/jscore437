@@ -8,7 +8,7 @@ export function renderResult(items) {
     items.forEach((item) => {
       const listItem = document.createElement("li");
       listItem.classList.add("listItem");
-      listItem.innerHTML = `<h4>${item.name}</h4>`;
+      listItem.innerHTML = `<h4 class="searchItem">${item.name}</h4>`;
       listElem.appendChild(listItem);
       listItem.addEventListener("click", (e) => {
         e.preventDefault();
